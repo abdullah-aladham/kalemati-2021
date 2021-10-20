@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 public class cards {
-	@Id
+	/*@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
 	protected
@@ -68,5 +68,5 @@ public String getCode() {
 @Override
 public String toString() {
 return "cards {}"+"id="+id +", name="+name+" , first image"+imagesrc +", last image"+imagesrc2+", CardCode"+Cardcode;
-}
+}*/
 }

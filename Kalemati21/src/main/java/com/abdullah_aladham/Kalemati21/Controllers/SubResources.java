@@ -2,22 +2,29 @@ package com.abdullah_aladham.Kalemati21.Controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.abdullah_aladham.Kalemati.Model.Subscriptions;
+import com.abdullah_aladham.Kalemati21.Model.Subscriptions;
+import com.abdullah_aladham.Kalemati21.Services.*;
 
-import service.SubsService;
 
+@RestController
+@RequestMapping("/subs")
 public class SubResources {
+	
 	private final  SubsService subService; 
-
-	public SubResource(SubsService subService) {
+	@Autowired
+	public SubResources(SubsService subService) {
 		this.subService=subService;
 	}
 

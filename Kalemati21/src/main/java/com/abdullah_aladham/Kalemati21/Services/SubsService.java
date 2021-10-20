@@ -4,13 +4,14 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.abdullah_aladham.Kalemati21.Exceptions.SubscriptionNotFoundException;
 import com.abdullah_aladham.Kalemati21.Model.Subscriptions;
 import com.abdullah_aladham.Kalemati21.Repo.SubscriptionRepo;
 
 
-
+@Service
 public class SubsService {
 	private final SubscriptionRepo subRepo;
 	 

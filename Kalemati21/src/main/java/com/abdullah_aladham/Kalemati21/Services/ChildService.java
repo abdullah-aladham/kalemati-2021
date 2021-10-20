@@ -4,13 +4,14 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.abdullah_aladham.Kalemati21.Exceptions.ChildNotFoundException;
 import com.abdullah_aladham.Kalemati21.Model.Child;
 import com.abdullah_aladham.Kalemati21.Repo.ChildRepo;
 
 
-
+@Service
 public class ChildService {
 	private final ChildRepo childRepo;
 
@@ -34,7 +35,7 @@ public class ChildService {
 		return childRepo.save(child);
 	}
 
-	public void DeleteCustomer(Long id) {
+	public void DeleteChild(Long id) {
 		ChildRepo.deleteChildById(id);
 	}
 	

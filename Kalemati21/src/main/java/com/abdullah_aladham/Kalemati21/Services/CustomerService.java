@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.abdullah_aladham.Kalemati21.Model.Customer;
 import com.abdullah_aladham.Kalemati21.Repo.CustomerRepo;
 import com.abdullah_aladham.Kalemati21.Exceptions.UserNotFoundException;
-
+@Service
 public class CustomerService {
 	private final CustomerRepo customerRepo;
 

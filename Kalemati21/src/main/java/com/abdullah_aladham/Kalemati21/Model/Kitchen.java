@@ -1,11 +1,16 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
-public class Kitchen  {
-	public kitchen(Long id,String name,String imagesrc,String imagesrc2 ,String cardcode){
-		super(id,name,imagesrc,imagesrc2, cardcode);
-		
+import javax.persistence.Entity;
+
+
+public class Kitchen extends cards {
+	/*Kitchen(Long id, String name, String src, String src2, String CardCode) {
+		super(id, name, src, src2, CardCode);
+		// TODO Auto-generated constructor stub
 	}
 
+
+
 	public Long getId() {
-		return id;}
+		return id;}*/
 }

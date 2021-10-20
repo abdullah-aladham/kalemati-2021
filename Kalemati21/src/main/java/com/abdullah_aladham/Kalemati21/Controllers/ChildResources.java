@@ -2,25 +2,31 @@ package com.abdullah_aladham.Kalemati21.Controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.abdullah_aladham.Kalemati.Model.Child;
-
-import service.ChildService;
-
+import com.abdullah_aladham.Kalemati21.Model.Child;
+import com.abdullah_aladham.Kalemati21.Services.*;
+@RestController
+@RequestMapping("/child")
 public class ChildResources {
+	
 	private final  ChildService childService; 
-	public ChildResource() {
+	@Autowired
+	public ChildResources() {
 		this.childService = null;}
 
-	public ChildResource(ChildService childService) {
+	public ChildResources(ChildService childService) {
 	this.childService=childService;
 }
 	
@@ -38,7 +44,7 @@ public ResponseEntity<Child> getChildById(@PathVariable("id")Long id){
 }
 
 @PostMapping("/add")
-public ResponseEntity<Child> addCustomer(@RequestBody Child child){
+public ResponseEntity<Child> addChild(@RequestBody Child child){
 	Child Newchild =childService.addChild(child);
 	return new ResponseEntity<>(Newchild,HttpStatus.CREATED);
 	
@@ -51,7 +57,7 @@ public ResponseEntity<Child> updateChild(@RequestBody Child child){
 }
 @DeleteMapping("/delete/{id}")
 public ResponseEntity<?> deleteChild(@PathVariable("id")Long id){
-	childService. DeleteCustomer(id);
+	childService. DeleteChild(id);
 	return new ResponseEntity<>(HttpStatus.OK);
 	
 }

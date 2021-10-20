@@ -4,15 +4,18 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.abdullah_aladham.Kalemati21.Model.cards;
-import com.abdullah_aladham.Kalemati21.Repo.CardRepo;
+//import com.abdullah_aladham.Kalemati21.Repo.CardRepo;
 import com.abdullah_aladham.Kalemati21.Exceptions.*;
 
 
-
+@Service
 public class CardsService {
-private final CardRepo cardRepo;
+	
+/*private final CardRepo cardRepo;
 	
 	@Autowired
 	public CardsService(CardRepo cardRepo) {
@@ -36,5 +39,5 @@ return	cardRepo.save(card);
 public void DeleteCard(Long id) {
 	CardRepo.deleteCardById(id);
 }
- 
+ */
 }

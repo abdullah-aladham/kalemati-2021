@@ -10,11 +10,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.abdullah_aladham.Kalemati.Model.Customer;
+import com.abdullah_aladham.Kalemati21.Model.Customer;
 
-import service.CustomerService;
-
+import com.abdullah_aladham.Kalemati21.Services.*;
+@RestController
+@RequestMapping("/customer")
 public class CustomerResource {
 	private final  CustomerService customerService; 
 
