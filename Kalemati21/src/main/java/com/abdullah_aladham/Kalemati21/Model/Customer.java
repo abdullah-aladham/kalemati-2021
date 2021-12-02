@@ -1,10 +1,13 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 @Entity
 public class Customer {
 	@Id
@@ -27,6 +30,10 @@ public class Customer {
 	private String Email;
 	@Column(nullable=false)
 	private String CustomerCode;
+	@ManyToMany
+	Set<Child> children;
+	@ManyToMany
+	Set<cards> card;
 	
 	Customer(Long id,String Firstname,String lastname,String Phoneno,String uname,String pass, String mail,String Ccode){
 		

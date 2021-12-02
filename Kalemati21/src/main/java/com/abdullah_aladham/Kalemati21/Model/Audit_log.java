@@ -1,0 +1,74 @@
+package com.abdullah_aladham.Kalemati21.Model;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Audit_log {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(nullable=false ,updatable=false)
+	private Long action_id;
+	@Column
+	private String Role;
+	
+	@Column 
+	private Date action_date;
+	@Column
+	private String Action_name;
+	@Column
+	private String action_desc;
+	
+	
+	public Long getId() {
+		return action_id;
+	}
+	public void setId(Long newid)
+	{
+		this.action_id=newid;
+		}
+	
+	public String getRole()
+	{
+		return Role;
+	}
+	public void setRole(String role)
+	{
+		this.Role=role;
+		}
+	public Date getDate()
+	{
+		return action_date;
+	}
+	public void setDate(Date newDate)
+	{
+		this.action_date=newDate;
+		}
+	
+	public String getActionName() 
+	{
+		return Action_name;
+	}
+	public void setActionName(String newName)
+	{
+		this.Action_name=newName;
+		}
+	
+	public String getDesc() 
+	{
+		return action_desc;
+	}
+	public void setDesc(String newDesc) 
+	{
+		this.action_desc=newDesc;
+	}
+	@Override
+	public String toString() {
+		return "Action number: "+action_id+"Action name: "+Action_name+"User role:"+Role+"Action date: "+action_date+"Action Description: "+action_desc;
+	}
+}

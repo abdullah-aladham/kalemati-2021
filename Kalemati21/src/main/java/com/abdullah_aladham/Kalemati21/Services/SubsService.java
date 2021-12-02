@@ -35,4 +35,7 @@ public class SubsService {
 	public void DeleteSub(Long id) {
 		subRepo.deleteSupscriptionById(id);
 	}
+	/*public void updateSubDate(Subscriptions sub,Date newdate) {
+		sub.
+	}*/
 }

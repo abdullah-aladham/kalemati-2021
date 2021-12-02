@@ -1,35 +1,36 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.ManyToOne;
+@Entity
 public class cards {
-	/*@Id
+	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
-	protected
-static Long id ;
+	protected Long id ;
 	@Column(nullable=false)
-	protected
-static String name;
+	protected String name;
 	@Column(nullable=false)
-	protected
-static String imagesrc;//image front
+	protected String imagesrc;//image front
 	@Column(nullable=false)
-	protected
-static String imagesrc2;//image back
-
-	private static String Cardcode;
-cards(Long id ,String name,String src, String src2 ,String CardCode){
+	protected String imagesrc2;//image back
+	@Column
+	private  String Cardcode;
+	@Column 
+	@ManyToOne
+	protected String CardType;
+/*public cards(Long id ,String name,String src, String src2 ,String CardCode){
 	
 	this.id=id;
 	this.name=name;
 	this.imagesrc=src;
 	this.imagesrc2=src2;
 	this.Cardcode=CardCode;
-}
+}*/
 public Long getId() {
 return id;
 
@@ -68,5 +69,5 @@ public String getCode() {
 @Override
 public String toString() {
 return "cards {}"+"id="+id +", name="+name+" , first image"+imagesrc +", last image"+imagesrc2+", CardCode"+Cardcode;
-}*/
+}
 }

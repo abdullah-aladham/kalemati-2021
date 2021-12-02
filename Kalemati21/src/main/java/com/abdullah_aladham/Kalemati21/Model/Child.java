@@ -1,10 +1,13 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 @Entity
 public class Child {
 	@Id
@@ -19,6 +22,8 @@ private float age;
 private String gender;
 	@Column(nullable=false)
 private String ChildCode;
+	@ManyToMany
+	Set<Customer> Parents;
 public Child() {}
 public Child(Long id,String name,float age,String gender, String code ) {
 	this.id=id;
