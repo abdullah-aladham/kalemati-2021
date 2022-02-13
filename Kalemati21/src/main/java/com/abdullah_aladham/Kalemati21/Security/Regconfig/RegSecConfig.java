@@ -42,7 +42,7 @@ public class RegSecConfig extends WebSecurityConfigurerAdapter{
 		provider.setPasswordEncoder();
 		provider.setUserDetailsService();
 		return provider;
-	}
+	}//here we stopped working on security side of user register 
 	
 
 }
