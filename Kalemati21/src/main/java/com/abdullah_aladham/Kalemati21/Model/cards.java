@@ -1,11 +1,16 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+//import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.FetchType;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.ManyToOne;
+//import javax.persistence.OneToMany;
+//import javax.persistence.OneToOne;
 @Entity
 public class cards {
 	@Id
@@ -17,12 +22,16 @@ public class cards {
 	@Column(nullable=false)
 	protected String imagesrc;//image front
 	@Column(nullable=false)
-	protected String imagesrc2;//image back
+	protected String imagesrc2;//image back or 2nd face
 	@Column
 	private  String Cardcode;
-	@Column 
-	@ManyToOne
-	protected String CardType;
+	//@Column 
+	//@OneToOne
+	//@ManyToOne
+	//@OneToOne(fetch=FetchType.LAZY)
+	
+	@JoinColumn(foreignKey = @ForeignKey(name = "Category_Id"))
+	protected Long Category_Id;
 /*public cards(Long id ,String name,String src, String src2 ,String CardCode){
 	
 	this.id=id;
