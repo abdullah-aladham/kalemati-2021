@@ -30,16 +30,16 @@ private String subtoken;
 //boolean didend;
 	@Column(nullable=false)
 
-private Long UserId;
+private Customer User;
 private String Code;
 
-Subscriptions(Long id ,String name,Date start,Date end,String token,Long uid){
+Subscriptions(Long id ,String name,Date start,Date end,String token,Customer uid){
 	this.id=id;
 	this.name=name;
 	this.sub_start=start;
 	this.sub_end=end;
 	this.subtoken=token;
-	this.UserId=uid;
+	this.User=uid;
 }
 public Long getid() {
 	return id;

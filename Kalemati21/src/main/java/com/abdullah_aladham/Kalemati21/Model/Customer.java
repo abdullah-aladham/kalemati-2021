@@ -1,5 +1,6 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
+import java.util.Collection;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -8,8 +9,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 @Entity
-public class Customer {
+public class Customer  {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
@@ -20,8 +24,8 @@ public class Customer {
 	private String last_name;
 	@Column(nullable=false)
 	private String Phonenumber;
-	@Column(nullable=false ,updatable=false)
-	private String Username;
+//	@Column(nullable=false ,updatable=false)
+//	private String Username;
 	@Column(nullable=false)
 	private String password;
 	@Column(nullable=false)
@@ -35,13 +39,12 @@ public class Customer {
 	@ManyToMany
 	Set<cards> card;
 	
-	Customer(Long id,String Firstname,String lastname,String Phoneno,String uname,String pass, String mail,String Ccode){
+	Customer(Long id,String Firstname,String lastname,String Phoneno,String pass, String mail,String Ccode){
 		
 		this.id=id;
 		this.Firstname=Firstname;
 		this.last_name=lastname;
 		this.Phonenumber=Phoneno;
-		this.Username=uname;
 		this.password=pass;
 		this.Email=mail;
 		this.CustomerCode=Ccode;
@@ -67,12 +70,12 @@ public String get_phonenum() {
 public void set_phonenumber(String phonenumber) {
 	this.Phonenumber=phonenumber;
 }
-public String getusername() {
+/*public String getusername() {
 	return Username;
 }
 public void setUsername(String Username) {
 	this.Username=Username;
-}
+}*/
 public String getEmail() {
 	return Email;
 }
@@ -106,6 +109,7 @@ public boolean ismatch(String pass,String cpass) {
 }
 @Override
 public String toString() {
-	return "Customer {}"+"id="+id+", name="+Firstname.concat(last_name)+" , phone number"+Phonenumber +", Username"+Username+", Email"+Email+", Customer Code:"+CustomerCode;
+	return "Customer {}"+"id="+id+", name="+Firstname.concat(last_name)+" , phone number"+Phonenumber +","+ "Email"+Email+", Customer Code:"+CustomerCode;
 }
+
 }

@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+
+import com.abdullah_aladham.Kalemati21.Enums.GenderEnum;
 @Entity
 public class Child {
 	@Id
@@ -19,17 +21,17 @@ private String name;
 	@Column(nullable=false)
 private float age;
 	@Column(nullable=false)
-private String gender;
+private GenderEnum gender;//enum
 	@Column(nullable=false)
 private String ChildCode;
 	@ManyToMany
-	Set<Customer> Parents;
+private	Customer Parents;
 public Child() {}
-public Child(Long id,String name,float age,String gender, String code ) {
+public Child(Long id,String name,float age, GenderEnum g, String code ) {
 	this.id=id;
 	this.name=name;
 	this.age=age;
-	this.gender=gender;
+	this.gender=g;
 	this.ChildCode=code;
 }
 public Long getId() {
@@ -51,10 +53,10 @@ public float getAge() {
 public void setAge(float newAge) {
 	this.age=newAge;
 }
-public String getGender() {
+public GenderEnum getGender() {
 	return gender;
 }
-public void setGender(String cgender) {
+public void setGender(GenderEnum cgender) {
 	this.gender=cgender;
 }
 public String getCode() {

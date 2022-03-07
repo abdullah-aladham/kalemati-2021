@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.abdullah_aladham.Kalemati21.Enums.CardCatEnum;
+
 @Entity
 public class CardCategories extends cards {
 	
@@ -15,10 +17,10 @@ public class CardCategories extends cards {
 	protected
 static Long Cat_id ;//category id
 	@Column(nullable=false)
-protected 	static String type;
-	CardCategories(Long id,String type){
+protected 	static CardCatEnum Categ_type;//type of category is chosen in frontend side and choices are put in the enum
+	CardCategories(Long id,CardCatEnum type){
 		this.id=id;
-		this.type=type;
+		this.Categ_type=type;
 	}
 	
 	
@@ -28,10 +30,10 @@ protected 	static String type;
 	public void setId(Long newId) {
 		this.id=newId;
 	}
-	public String getType() {
-		return type;
+	public CardCatEnum getType() {
+		return Categ_type;
 	}
-	public void setType(String newType) {
-		this.type=newType;
+	public void setType(CardCatEnum newType) {
+		this.Categ_type=newType;
 	}
 }

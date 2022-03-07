@@ -25,6 +25,7 @@ public class cards {
 	protected String imagesrc2;//image back or 2nd face
 	@Column
 	private  String Cardcode;
+	private CardCategories categories;
 	//@Column 
 	//@OneToOne
 	//@ManyToOne

@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.abdullah_aladham.Kalemati21.Security.ApplicationUserRole;
+
 @Entity
 public class Audit_log {
 	@Id
@@ -15,7 +17,7 @@ public class Audit_log {
 	@Column(nullable=false ,updatable=false)
 	private Long action_id;
 	@Column
-	private String Role;
+	private ApplicationUserRole Role;
 	
 	@Column 
 	private Date action_date;
@@ -23,6 +25,7 @@ public class Audit_log {
 	private String Action_name;
 	@Column
 	private String action_desc;
+	private Customer customer;
 	
 	
 	public Long getId() {
@@ -33,11 +36,11 @@ public class Audit_log {
 		this.action_id=newid;
 		}
 	
-	public String getRole()
+	public ApplicationUserRole getRole()
 	{
 		return Role;
 	}
-	public void setRole(String role)
+	public void setRole(ApplicationUserRole role)
 	{
 		this.Role=role;
 		}

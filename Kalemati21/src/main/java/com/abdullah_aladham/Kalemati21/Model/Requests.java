@@ -14,6 +14,7 @@ public class Requests {
 	private Long id;
 	private String name;
 	private Date request_date;
+	private Customer customer;
 @Column(name ="id")
 private Long cust_id;
 @Column
