@@ -13,7 +13,7 @@ import javax.persistence.ManyToMany;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 @Entity
-public class Customer  {
+public class School  {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
@@ -39,7 +39,7 @@ public class Customer  {
 	@ManyToMany
 	Set<cards> card;
 	
-	Customer(Long id,String Firstname,String lastname,String Phoneno,String pass, String mail,String Ccode){
+	School(Long id,String Firstname,String lastname,String Phoneno,String pass, String mail,String Ccode){
 		
 		this.id=id;
 		this.Firstname=Firstname;

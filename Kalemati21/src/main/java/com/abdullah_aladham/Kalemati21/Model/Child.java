@@ -24,8 +24,12 @@ private float age;
 private GenderEnum gender;//enum
 	@Column(nullable=false)
 private String ChildCode;
-	@ManyToMany
-private	Customer Parents;
+	@Column(nullable=false)
+	private int  disability_level;
+	@Column()
+	private double exam_result;
+//	@ManyToMany
+//private	School school;
 public Child() {}
 public Child(Long id,String name,float age, GenderEnum g, String code ) {
 	this.id=id;

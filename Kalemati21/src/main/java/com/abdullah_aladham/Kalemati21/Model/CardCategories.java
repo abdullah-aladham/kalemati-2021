@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import com.abdullah_aladham.Kalemati21.Enums.CardCatEnum;
 
 @Entity
-public class CardCategories extends cards {
+public class CardCategories extends cards {//admin(cru_isdeleted) customer&teacher(read)
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

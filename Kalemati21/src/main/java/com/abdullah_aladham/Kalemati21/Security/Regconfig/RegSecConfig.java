@@ -31,18 +31,18 @@ public class RegSecConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		// TODO Auto-generated method stub
-			auth.authenticationProvider(null)
+			auth.authenticationProvider(null);
 
 	}
 	
-	@Bean 
-	public DaoAuthenticationProvider daoAuthenticationProvider() {
-		DaoAuthenticationProvider provider =
-				new DaoAuthenticationProvider();
-		provider.setPasswordEncoder();
-		provider.setUserDetailsService();
-		return provider;
-	}//here we stopped working on security side of user register 
+//	@Bean 
+//	public DaoAuthenticationProvider daoAuthenticationProvider() {
+//		DaoAuthenticationProvider provider =
+//				new DaoAuthenticationProvider();
+//		provider.setPasswordEncoder();
+//		provider.setUserDetailsService();
+//		return provider;
+//	}//here we stopped working on security side of user register 
 	
 
 }

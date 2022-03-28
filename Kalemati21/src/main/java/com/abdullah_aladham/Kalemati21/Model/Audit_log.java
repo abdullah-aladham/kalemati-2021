@@ -25,7 +25,7 @@ public class Audit_log {
 	private String Action_name;
 	@Column
 	private String action_desc;
-	private Customer customer;
+	private School customer;
 	
 	
 	public Long getId() {

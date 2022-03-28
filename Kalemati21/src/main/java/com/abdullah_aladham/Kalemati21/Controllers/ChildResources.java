@@ -55,10 +55,10 @@ public ResponseEntity<Child> updateChild(@RequestBody Child child){
 	return new ResponseEntity<>(updateChild,HttpStatus.OK);
 	
 }
-@DeleteMapping("/delete/{id}")
-public ResponseEntity<?> deleteChild(@PathVariable("id")Long id){
-	childService. DeleteChild(id);
-	return new ResponseEntity<>(HttpStatus.OK);
-	
-}
+//@DeleteMapping("/delete/{id}")
+//public ResponseEntity<?> deleteChild(@PathVariable("id")Long id){
+//	childService. DeleteChild(id);
+//	return new ResponseEntity<>(HttpStatus.OK);
+//	
+//}
 }

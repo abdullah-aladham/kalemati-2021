@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Subscriptions {
+public class Subscriptions {//must be connected with admin customer and teacher(read their subscription only)
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
@@ -30,10 +30,10 @@ private String subtoken;
 //boolean didend;
 	@Column(nullable=false)
 
-private Customer User;
+private School User;
 private String Code;
 
-Subscriptions(Long id ,String name,Date start,Date end,String token,Customer uid){
+Subscriptions(Long id ,String name,Date start,Date end,String token,School uid){
 	this.id=id;
 	this.name=name;
 	this.sub_start=start;
