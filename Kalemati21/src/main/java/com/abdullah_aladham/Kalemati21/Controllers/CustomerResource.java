@@ -19,9 +19,9 @@ import com.abdullah_aladham.Kalemati21.Services.*;
 @RestController
 @RequestMapping("/customer")
 public class CustomerResource {
-	private final  CustomerService customerService; 
+	private final  SchoolService customerService; 
 
-	public CustomerResource(CustomerService customerService) {
+	public CustomerResource(SchoolService customerService) {
 	this.customerService=customerService;
 }
 	public CustomerResource() {

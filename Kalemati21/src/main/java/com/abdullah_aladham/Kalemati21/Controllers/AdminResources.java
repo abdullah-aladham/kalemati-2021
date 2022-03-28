@@ -2,6 +2,8 @@ package com.abdullah_aladham.Kalemati21.Controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,15 +11,20 @@ import org.springframework.web.bind.annotation.RestController;
 import com.abdullah_aladham.Kalemati21.Model.Child;
 import com.abdullah_aladham.Kalemati21.Model.School;
 import com.abdullah_aladham.Kalemati21.Model.Teacher;
+import com.abdullah_aladham.Kalemati21.Services.ChildService;
+import com.abdullah_aladham.Kalemati21.Services.SchoolService;
 
 @RestController
 @RequestMapping("/admin")
 public class AdminResources implements adminController_interface {
+	private final  SchoolService schoolService; 
+
 
 	@Override
 	public ResponseEntity<List<School>> getAllSchools() {
 		// TODO Auto-generated method stub
-		return null;
+		List<School> schools =schoolService.findallSchools();
+		return new ResponseEntity<>(schools, HttpStatus.OK);
 	}
 
 	@Override
@@ -160,6 +167,12 @@ public class AdminResources implements adminController_interface {
 
 	@Override
 	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherIDAndChildNameAndChildID() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity<List<School>> getSchoolsByChildDisability() {
 		// TODO Auto-generated method stub
 		return null;
 	}

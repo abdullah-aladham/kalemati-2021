@@ -45,6 +45,9 @@ public interface adminController_interface {
 	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherID();
 	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherIDAndChildName();
 	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherIDAndChildNameAndChildID();
+	public ResponseEntity<List<School>> getSchoolsByChildDisability();
+	
+
 
 
 	
