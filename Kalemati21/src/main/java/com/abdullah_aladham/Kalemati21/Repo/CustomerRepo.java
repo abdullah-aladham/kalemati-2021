@@ -19,6 +19,7 @@ public interface CustomerRepo extends JpaRepository<School,Long> {
 	Optional<School> findSchoolByLocation(String location);
 	Optional<School> findSchoolsByIdAndName(String name,Long id);
 	Optional<School> findSchoolsByIdNameAndLocation(String name,Long id,String location);
+	
 
 	
 

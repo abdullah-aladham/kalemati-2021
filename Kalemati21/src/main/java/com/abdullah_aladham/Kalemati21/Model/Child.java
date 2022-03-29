@@ -26,17 +26,20 @@ private GenderEnum gender;//enum
 private String ChildCode;
 	@Column(nullable=false)
 	private int  disability_level;
-	@Column()
+	@Column(nullable=false)
 	private double exam_result;
+	@Column(nullable=false)
+	private boolean deleted;
 //	@ManyToMany
 //private	School school;
 public Child() {}
-public Child(Long id,String name,float age, GenderEnum g, String code ) {
+public Child(Long id,String name,float age, GenderEnum g, String code,boolean deleted ) {
 	this.id=id;
 	this.name=name;
 	this.age=age;
 	this.gender=g;
 	this.ChildCode=code;
+	this.deleted=deleted;
 }
 public Long getId() {
 	return id;
