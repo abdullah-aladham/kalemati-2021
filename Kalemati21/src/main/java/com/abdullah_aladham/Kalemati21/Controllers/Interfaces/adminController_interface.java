@@ -1,4 +1,4 @@
-package com.abdullah_aladham.Kalemati21.Controllers;
+package com.abdullah_aladham.Kalemati21.Controllers.Interfaces;
 
 import java.util.List;
 

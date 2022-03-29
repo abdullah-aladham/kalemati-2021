@@ -29,20 +29,20 @@ public class CustomerResource {
 
 @GetMapping("/all")
 public ResponseEntity<List<School>> getAllCustomers(){
-	List<School> customers =customerService.findallCustomers();
+	List<School> customers =customerService.findallSchools();
 	return new ResponseEntity<>(customers, HttpStatus.OK);
 }
 
 
 @GetMapping("/find/{id}")
 public ResponseEntity<School> getCustomerById(@PathVariable("id")Long id){
-	School customer =customerService. findCustomerById(id);
+	School customer =customerService. findSchoolById(id);
 	return new ResponseEntity<>(customer, HttpStatus.OK);
 }
 
 @PostMapping("/add")
 public ResponseEntity<School> addCustomer(@RequestBody School customer){
-	School Newcustomer =customerService.addCustomer(customer);
+	School Newcustomer =customerService.addSchool(customer);
 	return new ResponseEntity<>(Newcustomer,HttpStatus.CREATED);
 	
 }

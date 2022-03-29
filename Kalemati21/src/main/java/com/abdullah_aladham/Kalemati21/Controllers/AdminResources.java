@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.abdullah_aladham.Kalemati21.Controllers.Interfaces.adminController_interface;
 import com.abdullah_aladham.Kalemati21.Model.Child;
 import com.abdullah_aladham.Kalemati21.Model.School;
 import com.abdullah_aladham.Kalemati21.Model.Teacher;
@@ -18,7 +19,14 @@ import com.abdullah_aladham.Kalemati21.Services.SchoolService;
 @RequestMapping("/admin")
 public class AdminResources implements adminController_interface {
 	private final  SchoolService schoolService; 
+	
+	
 
+	@Autowired
+	public AdminResources(SchoolService schoolService) {
+		
+		this.schoolService = schoolService;
+	}
 
 	@Override
 	public ResponseEntity<List<School>> getAllSchools() {
@@ -30,6 +38,7 @@ public class AdminResources implements adminController_interface {
 	@Override
 	public ResponseEntity<List<School>> getAllSchoolsNames() {
 		// TODO Auto-generated method stub
+//		List<School> query=schoolservice
 		return null;
 	}
 
