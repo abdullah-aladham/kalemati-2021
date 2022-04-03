@@ -24,22 +24,25 @@ private Date  sub_start;
 	@Column(nullable=false)
 
 private Date sub_end;
+	
 	@Column(nullable=false)
-
 private String subtoken;
-//boolean didend;
 	@Column(nullable=false)
+	private boolean isdeleted;
+//boolean didend;
+//	@Column(nullable=false)
 
-private School User;
-private String Code;
+//private School User;
+//private String Code;
 
-Subscriptions(Long id ,String name,Date start,Date end,String token,School uid){
+Subscriptions(Long id ,String name,Date start,Date end,String token,School uid,boolean deleted){
 	this.id=id;
 	this.name=name;
 	this.sub_start=start;
 	this.sub_end=end;
 	this.subtoken=token;
-	this.User=uid;
+	this.isdeleted=deleted;
+//	this.User=uid;
 }
 public Long getid() {
 	return id;
@@ -66,10 +69,11 @@ public Date GetendDate() {
 public void setEnd(Date newEnd) {
 	this.sub_end=newEnd;
 }
-public String getCode() {
-	return Code;
-}
-public void SetCode(String NewCode) {
-	this.Code=NewCode;
-}
+//public String getCode() {
+//	return Code;
+//}
+//public void SetCode(String NewCode) {
+//	this.Code=NewCode;
+//}
+
 }

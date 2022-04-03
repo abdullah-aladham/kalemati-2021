@@ -168,11 +168,11 @@ public class AdminResources implements adminController_interface {
 		return null;
 	}
 
-	@Override
-	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherIDAndChildName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherIDAndChildName() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 	@Override
 	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherIDAndChildNameAndChildID() {

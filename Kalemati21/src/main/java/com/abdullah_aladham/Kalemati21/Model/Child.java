@@ -29,7 +29,7 @@ private String ChildCode;
 	@Column(nullable=false)
 	private double exam_result;
 	@Column(nullable=false)
-	private boolean deleted;
+	private boolean isdeleted;
 //	@ManyToMany
 //private	School school;
 public Child() {}
@@ -39,7 +39,7 @@ public Child(Long id,String name,float age, GenderEnum g, String code,boolean de
 	this.age=age;
 	this.gender=g;
 	this.ChildCode=code;
-	this.deleted=deleted;
+	this.isdeleted=deleted;
 }
 public Long getId() {
 	return id;
@@ -76,4 +76,29 @@ public void SetCode(String newCode) {
 public String toString() {
 	return "id: "+id+"Childname: "+name+"Age is: "+age+"gender: "+gender+"ChildCode is: "+ChildCode;
 }
+public String getChildCode() {
+	return ChildCode;
+}
+public void setChildCode(String childCode) {
+	ChildCode = childCode;
+}
+public int getDisability_level() {
+	return disability_level;
+}
+public void setDisability_level(int disability_level) {
+	this.disability_level = disability_level;
+}
+public double getExam_result() {
+	return exam_result;
+}
+public void setExam_result(double exam_result) {
+	this.exam_result = exam_result;
+}
+public boolean isDeleted() {
+	return isdeleted;
+}
+public void setDeleted(boolean deleted) {
+	this.isdeleted = deleted;
+}
+
 }

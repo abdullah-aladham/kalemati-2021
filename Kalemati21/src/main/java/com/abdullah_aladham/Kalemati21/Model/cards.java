@@ -21,18 +21,16 @@ public class cards {
 	protected String name;
 	@Column(nullable=false)
 	protected String imagesrc;//image front
-	@Column(nullable=false)
-	protected String imagesrc2;//image back or 2nd face
 	@Column
 	private  String Cardcode;
-	private CardCategories categories;
+//	private CardCategories categories;
 	//@Column 
 	//@OneToOne
 	//@ManyToOne
 	//@OneToOne(fetch=FetchType.LAZY)
 	
-	@JoinColumn(foreignKey = @ForeignKey(name = "Category_Id"))
-	protected Long Category_Id;
+//	@JoinColumn(foreignKey = @ForeignKey(name = "Category_Id"))
+//	protected Long Category_Id;
 /*public cards(Long id ,String name,String src, String src2 ,String CardCode){
 	
 	this.id=id;
@@ -62,12 +60,7 @@ public void setsrc(String newsrc) {
 	this.imagesrc=newsrc;
 }
 
-public String getsrc2() {
-return imagesrc2;
-}
-public void setsrc2(String newsrc) {
-	this.imagesrc2=newsrc;
-}
+
 
 public String getCode() {
 	return Cardcode;
@@ -78,6 +71,6 @@ public String getCode() {
 
 @Override
 public String toString() {
-return "cards {}"+"id="+id +", name="+name+" , first image"+imagesrc +", last image"+imagesrc2+", CardCode"+Cardcode;
+return "cards {}"+"id="+id +", name="+name+" , first image"+imagesrc +","+", CardCode"+Cardcode;
 }
 }

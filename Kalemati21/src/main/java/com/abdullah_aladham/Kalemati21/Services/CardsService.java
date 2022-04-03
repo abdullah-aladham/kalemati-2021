@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.abdullah_aladham.Kalemati21.Model.cards;
+import com.abdullah_aladham.Kalemati21.Repo.CardRepo;
 //import com.abdullah_aladham.Kalemati21.Repo.CardRepo;
 import com.abdullah_aladham.Kalemati21.Exceptions.*;
 
@@ -15,7 +16,8 @@ import com.abdullah_aladham.Kalemati21.Exceptions.*;
 @Service
 public class CardsService {
 	
-/*private final CardRepo cardRepo;
+	private final CardRepo cardRepo;
+	
 	
 	@Autowired
 	public CardsService(CardRepo cardRepo) {
@@ -36,8 +38,8 @@ public cards findCardById(long id) {
 public cards UpdateCard(cards card) {
 return	cardRepo.save(card);
 }
-public void DeleteCard(Long id) {
-	CardRepo.deleteCardById(id);
-}
- */
+//public void DeleteCard(Long id) {
+//	CardRepo.deleteCardById(id);
+//}
+ 
 }

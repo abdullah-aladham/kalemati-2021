@@ -7,12 +7,12 @@ import org.springframework.stereotype.Repository;
 
 import com.abdullah_aladham.Kalemati21.Model.cards;
 
-//@Repository
-//public interface CardRepo extends JpaRepository<cards,Long> {
-	/* Optional<cards> findCardById(long id);
+@Repository
+public interface CardRepo extends JpaRepository<cards,Long> {
+	Optional<cards> findCardById(long id);
 
-		static void deleteCardById(Long id) {
-			// TODO Auto-generated method stub
-			
-		}*/
-//}
+//		static void deleteCardById(Long id) {
+//			// TODO Auto-generated method stub
+//			
+//		}
+}

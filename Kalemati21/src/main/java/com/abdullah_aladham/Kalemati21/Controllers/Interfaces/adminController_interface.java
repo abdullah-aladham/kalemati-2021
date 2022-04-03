@@ -43,7 +43,7 @@ public interface adminController_interface {
 	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherID();
 	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherName();
 	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherID();
-	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherIDAndChildName();
+//	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherIDAndChildName();
 	public ResponseEntity<List<School>> getSchoolsByNameandLocationsAndTeacherNameAndTeacherIDAndChildNameAndChildID();
 	public ResponseEntity<List<School>> getSchoolsByChildDisability();
 	

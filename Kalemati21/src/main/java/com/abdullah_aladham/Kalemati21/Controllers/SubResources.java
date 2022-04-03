@@ -53,10 +53,11 @@ public class SubResources {
 		return new ResponseEntity<>(updateSub,HttpStatus.OK);
 		
 	}
-	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<?> deleteSub(@PathVariable("id")Long id){
-		subService.  DeleteSub(id);
-		return new ResponseEntity<>(HttpStatus.OK);
-		
-	}
+//	@DeleteMapping("/delete/{id}")
+//	public ResponseEntity<?> deleteSub(@PathVariable("id")Long id){
+//		subService.  DeleteSub(id);
+//		return new ResponseEntity<>(HttpStatus.OK);
+//		
+//	}
+	
 }

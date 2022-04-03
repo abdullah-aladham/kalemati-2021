@@ -19,10 +19,10 @@ public class SubsService {
 	public SubsService(SubscriptionRepo subRepo) {
 		this.subRepo=subRepo;
 	}
-	public Subscriptions addsub(Subscriptions sub) {
-		sub.SetCode(UUID.randomUUID().toString());
-		return subRepo.save(sub);
-	}
+//	public Subscriptions addsub(Subscriptions sub) {
+//		sub.SetCode(UUID.randomUUID().toString());
+//		return subRepo.save(sub);
+//	}
 	public List<Subscriptions> findAllSubs(){
 		return subRepo.findAll();
 	}

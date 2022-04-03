@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import com.abdullah_aladham.Kalemati21.Model.cards;
 
 import com.abdullah_aladham.Kalemati21.Services.CardsService;
-@Service
+@RestController
+@RequestMapping("/card")
 public class CardResources {
 	}
