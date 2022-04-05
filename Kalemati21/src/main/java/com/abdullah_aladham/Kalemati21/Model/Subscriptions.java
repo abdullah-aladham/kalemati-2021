@@ -29,6 +29,8 @@ private Date sub_end;
 private String subtoken;
 	@Column(nullable=false)
 	private boolean isdeleted;
+	@Column(nullable=false)
+	cards c;
 //boolean didend;
 //	@Column(nullable=false)
 

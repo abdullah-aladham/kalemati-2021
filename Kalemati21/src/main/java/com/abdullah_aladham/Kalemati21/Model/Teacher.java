@@ -26,8 +26,8 @@ public class Teacher {/*teacher has 1school(custmer)m-1, teacher has many childr
 	
 	
 	
+	
 	public Teacher(Long id, String name, String phoneNo, String desciption, String email, String major) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.phoneNo = phoneNo;

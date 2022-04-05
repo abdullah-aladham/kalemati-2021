@@ -36,9 +36,14 @@ public class School  {
 	private String CustomerCode;
 	@ManyToMany
 	Set<Child> children;
-	@ManyToMany
-	Set<cards> card;
-	
+	@Column
+	Subscriptions sub;//this is meant for not letting the school immediately access to cards and not letting them forever access
+//	@Column()
+//	Set<cards> card;//i don't know really if school should be connected to cards immediately
+	@Column(nullable=false)
+	Set<Teacher> teachers;
+	@Column(nullable=false)
+	boolean isblocked;//checks if schools is blocked or not
 	School(Long id,String Firstname,String lastname,String Phoneno,String pass, String mail,String Ccode){
 		
 		this.id=id;
