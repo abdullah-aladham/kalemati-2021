@@ -18,7 +18,8 @@ public class CardCategories extends cards {//admin(cru_isdeleted) customer&teach
 static Long Cat_id ;//category id
 	@Column(nullable=false)
 protected 	static CardCatEnum Categ_type;//type of category is chosen in frontend side and choices are put in the enum
-	CardCategories(Long id,CardCatEnum type){
+public 	CardCategories(Long id,CardCatEnum type){
+	super(id, name, imagesrc, Cardcode);
 		this.id=id;
 		this.Categ_type=type;
 	}

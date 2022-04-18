@@ -20,9 +20,9 @@ public class cards {
 	@Column(nullable=false)
 	protected String name;
 	@Column(nullable=false)
-	protected String imagesrc;//image front
-	@Column
-	private  String Cardcode;
+	protected String imagesrc;
+	@Column(nullable=false)
+	protected  String Cardcode;
 //	private CardCategories categories;
 	//@Column 
 	//@OneToOne
@@ -39,10 +39,17 @@ public class cards {
 	this.imagesrc2=src2;
 	this.Cardcode=CardCode;
 }*/
+	public cards(Long id, String name, String imagesrc, String cardcode) {
+		this.id = id;
+		this.name = name;
+		this.imagesrc = imagesrc;
+		Cardcode = cardcode;
+	}
 public Long getId() {
 return id;
 
 }
+
 public void setId(Long id) {
 this.id=id;
 }
@@ -63,7 +70,7 @@ public void setsrc(String newsrc) {
 
 
 public String getCode() {
-	return Cardcode;
+	 return Cardcode;
 }
  public void SetCode(String newCode) {
 	 this.Cardcode=newCode;

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +30,8 @@ public class AdminResources implements adminController_interface {
 	}
 
 	@Override
+	@GetMapping("/all")
+
 	public ResponseEntity<List<School>> getAllSchools() {
 		// TODO Auto-generated method stub
 		List<School> schools =schoolService.findallSchools();
@@ -36,6 +39,8 @@ public class AdminResources implements adminController_interface {
 	}
 
 	@Override
+	@GetMapping("/sch-names")
+
 	public ResponseEntity<List<School>> getAllSchoolsNames() {
 		// TODO Auto-generated method stub
 //		List<School> query=schoolservice
@@ -43,30 +48,39 @@ public class AdminResources implements adminController_interface {
 	}
 
 	@Override
+	@GetMapping("/sch-loc")
+
 	public ResponseEntity<List<School>> getAllSchoolLocations() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
+	@GetMapping("/allsc/id")
+
 	public ResponseEntity<List<School>> getAllSchoolsIDs() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
+	@GetMapping("teacher/all")
+
 	public ResponseEntity<List<Teacher>> getAllTeachers() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
+	@GetMapping("teacher/name")
+
 	public ResponseEntity<List<Teacher>> getAllTeacherNames() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
+	
 	public ResponseEntity<List<Teacher>> getAllTeacherLocations() {
 		// TODO Auto-generated method stub
 		return null;
