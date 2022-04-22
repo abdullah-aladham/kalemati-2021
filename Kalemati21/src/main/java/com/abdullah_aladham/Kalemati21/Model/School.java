@@ -1,6 +1,7 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -32,17 +33,18 @@ public class School  {
 //	private String Email;
 	@Column(nullable=false)
 	private String CustomerCode;
-	@ManyToMany
-	Set<Child> children;
+	
+	Set<Patients> children=new HashSet();
+
 	@Column
-	Subscriptions sub;//this is meant for not letting the school immediately access to cards and not letting them forever access
+	Set<Subscriptions> sub=new HashSet();//this is meant for not letting the school immediately access to cards and not letting them forever access
 //	@Column()
 //	Set<cards> card;//i don't know really if school should be connected to cards immediately
 	@Column(nullable=false)
-	Set<Teacher> teachers;
+	Set<Teacher> teachers=new HashSet();
 	@Column(nullable=false)
 	boolean isblocked;//checks if schools is blocked or not
-	School(Long id,String schoolname,String lastname,String Ccode,Set<Child> children,Set<Teacher>teachers,boolean blocked){
+	School(Long id,String schoolname,String lastname,String Ccode,Set<Patients> children,Set<Teacher>teachers,boolean blocked,Set<Subscriptions>subs){
 		
 		this.id=id;
 		this.SchoolName=schoolname;
@@ -115,20 +117,27 @@ public boolean ismatch(String pass,String cpass) {
 public String toString() {
 	return "Customer "+"id="+id+","+"SchoolName"+SchoolName+", School Code:"+CustomerCode;
 }
-public Set<Child> getChildren() {
+public Set<Patients> getChildren() {
 	return children;
 }
-public void setChildren(Set<Child> children) {
+public void setChildren(Set<Patients> children) {
 	this.children = children;
 }
-public Subscriptions getSub() {
-	return sub;
-}
-public void setSub(Subscriptions sub) {
-	this.sub = sub;
-}
+//public Subscriptions getSub() {
+//	return sub;
+//}
+//public void setSub(Subscriptions sub) {
+//	this.sub = sub;
+//}
+
 public Set<Teacher> getTeachers() {
 	return teachers;
+}
+public Set<Subscriptions> getSub() {
+	return sub;
+}
+public void setSub(Set<Subscriptions> sub) {
+	this.sub = sub;
 }
 public void setTeachers(Set<Teacher> teachers) {
 	this.teachers = teachers;

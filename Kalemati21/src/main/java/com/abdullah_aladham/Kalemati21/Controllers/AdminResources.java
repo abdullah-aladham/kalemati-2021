@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.abdullah_aladham.Kalemati21.Controllers.Interfaces.adminController_interface;
-import com.abdullah_aladham.Kalemati21.Model.Child;
+import com.abdullah_aladham.Kalemati21.Model.Patients;
 import com.abdullah_aladham.Kalemati21.Model.School;
 import com.abdullah_aladham.Kalemati21.Model.Teacher;
-import com.abdullah_aladham.Kalemati21.Services.ChildService;
+import com.abdullah_aladham.Kalemati21.Services.PatientsService;
 import com.abdullah_aladham.Kalemati21.Services.SchoolService;
 
 @RestController
@@ -93,37 +93,37 @@ public class AdminResources implements adminController_interface {
 	}
 
 	@Override
-	public ResponseEntity<List<Child>> getAllchildren() {
+	public ResponseEntity<List<Patients>> getAllchildren() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResponseEntity<List<Child>> getAllchildrenIDs() {
+	public ResponseEntity<List<Patients>> getAllchildrenIDs() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResponseEntity<List<Child>> getAllchildrenLocations() {
+	public ResponseEntity<List<Patients>> getAllchildrenLocations() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResponseEntity<List<Child>> getAllchildrenNames() {
+	public ResponseEntity<List<Patients>> getAllchildrenNames() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResponseEntity<List<Child>> getAllchildrenAges() {
+	public ResponseEntity<List<Patients>> getAllchildrenAges() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ResponseEntity<List<Child>> getAllchildren_Disabilities() {
+	public ResponseEntity<List<Patients>> getAllchildren_Disabilities() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 
-import com.abdullah_aladham.Kalemati21.Model.Child;
+import com.abdullah_aladham.Kalemati21.Model.Patients;
 import com.abdullah_aladham.Kalemati21.Model.School;
 import com.abdullah_aladham.Kalemati21.Model.Teacher;
 
@@ -23,12 +23,12 @@ public interface adminController_interface {
 	//end of all Teachers GET REQUEST
 	
 	//children GET requests
-	public ResponseEntity<List<Child>> getAllchildren();
-	public ResponseEntity<List<Child>> getAllchildrenIDs();
-	public ResponseEntity<List<Child>> getAllchildrenLocations();
-	public ResponseEntity<List<Child>> getAllchildrenNames();
-	public ResponseEntity<List<Child>> getAllchildrenAges();
-	public ResponseEntity<List<Child>> getAllchildren_Disabilities();
+	public ResponseEntity<List<Patients>> getAllchildren();
+	public ResponseEntity<List<Patients>> getAllchildrenIDs();
+	public ResponseEntity<List<Patients>> getAllchildrenLocations();
+	public ResponseEntity<List<Patients>> getAllchildrenNames();
+	public ResponseEntity<List<Patients>> getAllchildrenAges();
+	public ResponseEntity<List<Patients>> getAllchildren_Disabilities();
 	
 	
 	//Teacher POST

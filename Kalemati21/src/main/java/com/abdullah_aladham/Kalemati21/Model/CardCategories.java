@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import com.abdullah_aladham.Kalemati21.Enums.CardCatEnum;
 
 @Entity
-public class CardCategories extends cards {//admin(cru_isdeleted) customer&teacher(read)
+public class CardCategories{//admin(cru_isdeleted) customer&teacher(read)
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -18,19 +18,19 @@ public class CardCategories extends cards {//admin(cru_isdeleted) customer&teach
 static Long Cat_id ;//category id
 	@Column(nullable=false)
 protected 	static CardCatEnum Categ_type;//type of category is chosen in frontend side and choices are put in the enum
-public 	CardCategories(Long id,CardCatEnum type){
-	super(id, name, imagesrc, Cardcode);
-		this.id=id;
+public 	CardCategories(Long Cat_id,CardCatEnum type){
+//	super(id, name, imagesrc, Cardcode);
+		this.Cat_id=Cat_id;
 		this.Categ_type=type;
 	}
 	
-	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long newId) {
-		this.id=newId;
-	}
+
+//	public Long getId() {
+//		return id;
+//	}
+//	public void setId(Long newId) {
+//		this.id=newId;
+//	}
 	public CardCatEnum getType() {
 		return Categ_type;
 	}

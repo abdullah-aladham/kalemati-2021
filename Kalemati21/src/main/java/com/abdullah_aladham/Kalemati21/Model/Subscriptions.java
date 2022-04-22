@@ -17,7 +17,7 @@ public class Subscriptions {//must be connected with admin customer and teacher(
 private Long id;
 	@Column(nullable=false)
 
-private String name;
+private String sub_name;
 	@Column(nullable=false)
 	
 private Date  sub_start;
@@ -29,8 +29,8 @@ private Date sub_end;
 private String subtoken;
 	@Column(nullable=false)
 	private boolean isdeleted;
-	@Column(nullable=false)
-	cards c;
+	
+	
 //boolean didend;
 //	@Column(nullable=false)
 
@@ -39,7 +39,7 @@ private String subtoken;
 
 Subscriptions(Long id ,String name,Date start,Date end,String token,School uid,boolean deleted){
 	this.id=id;
-	this.name=name;
+	this.sub_name=name;
 	this.sub_start=start;
 	this.sub_end=end;
 	this.subtoken=token;
@@ -54,10 +54,10 @@ public void setId(Long newId) {
 	this.id=newId;
 }
 public String getName() {
-	return name;
+	return sub_name;
 }
 public void Setname(String newname) {
-	this.name=newname;
+	this.sub_name=newname;
 }
 public Date getStartDate() {
 	return sub_start;

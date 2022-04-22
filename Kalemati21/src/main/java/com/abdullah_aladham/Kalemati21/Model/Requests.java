@@ -21,8 +21,8 @@ public class Requests {//admin(cru_isdeleted) customer(c_isdeleted)
 	protected String requestCode;
 	@Column(nullable=false)
 	protected School customer;
-	@Column(nullable=false)
-	protected Teacher teacher;
+//	@Column(nullable=false)
+//	protected Teacher teacher;
 	
 //	private School customer;
 

@@ -1,5 +1,6 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -11,7 +12,7 @@ import javax.persistence.ManyToMany;
 
 import com.abdullah_aladham.Kalemati21.Enums.GenderEnum;
 @Entity
-public class Child {
+public class Patients {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
@@ -34,10 +35,13 @@ private String ChildCode;
 	private School school;
 	@Column(nullable=false)
 	private Teacher teacher;
+	
+//	private School school;
+	Set<Teacher>teachers=new HashSet();
 //	@ManyToMany
 //private	School school;
-public Child() {}
-public Child(Long id,String name,float age, GenderEnum g, String code,boolean deleted ) {
+//public Patients() {}
+public Patients(Long id,String name,float age, GenderEnum g, String code,boolean deleted ) {
 	this.id=id;
 	this.name=name;
 	this.age=age;

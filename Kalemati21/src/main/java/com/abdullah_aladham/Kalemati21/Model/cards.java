@@ -23,6 +23,7 @@ public class cards {
 	protected String imagesrc;
 	@Column(nullable=false)
 	protected  String Cardcode;
+	protected CardCategories card_category;
 //	private CardCategories categories;
 	//@Column 
 	//@OneToOne

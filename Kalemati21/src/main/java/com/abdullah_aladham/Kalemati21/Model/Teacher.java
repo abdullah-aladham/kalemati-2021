@@ -1,5 +1,8 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,17 +26,20 @@ public class Teacher {/*teacher has 1school(custmer)m-1, teacher has many childr
 	private String email;//teacher email
 	@Column(nullable=false)
 	private String major;//teacher major
+	@Column(nullable=false)
+    private Set<School>school=new HashSet();
 	
 	
 	
 	
-	public Teacher(Long id, String name, String phoneNo, String desciption, String email, String major) {
+	public Teacher(Long id, String name, String phoneNo, String desciption, String email, String major,Set<School>schools) {
 		this.id = id;
 		this.name = name;
 		this.phoneNo = phoneNo;
 		this.desciption = desciption;
 		this.email = email;
 		this.major = major;
+		this.school=schools;
 	}
 
 
@@ -106,6 +112,19 @@ public class Teacher {/*teacher has 1school(custmer)m-1, teacher has many childr
 
 	public void setMajor(String major) {
 		this.major = major;
+	}
+	
+
+
+
+	public Set<School> getSchool() {
+		return school;
+	}
+
+
+
+	public void setSchool(Set<School> school) {
+		this.school = school;
 	}
 
 
