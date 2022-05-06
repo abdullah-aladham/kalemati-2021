@@ -28,21 +28,21 @@ public class PatientsService {
 		return childRepo.findAll();
 	}
 
-	public Patients findChildById(Long id) {
-	return  childRepo.findChildById(id).orElseThrow(()->new ChildNotFoundException("The user id"+id+" is not found"));	
-	}
-	public Patients findChildWithname(String name) {
-		return childRepo.findChildByname(name).orElseThrow(()->new ChildNotFoundException("The child with"+name+" is not found"));
-	}
-	public Patients findChildByLocation(String location) {
-		return childRepo.findChildLocation(location).orElseThrow(()->new ChildNotFoundException("The child with"+location+" is not found"));
-	}
-	public Patients findChildWithIdandName(String id,String name) {
-		return childRepo.findChildByIdAndName(id, name).orElseThrow(()->new ChildNotFoundException("The child with"+id+" and "+name+" is not found"));
-	}
-	public Patients findChildWithIdNameAndLocation(String name,Long id ,String loc) {
-		return childRepo.findChildByIdAndNameAndLocation(id,name, loc).orElseThrow(()->new ChildNotFoundException("The child with"+id+", "+name+" and "+loc+" is not found"));
-	}
+//	public Patients findChildById(Long id) {
+//	return  childRepo.findChildById(id).orElseThrow(()->new ChildNotFoundException("The user id"+id+" is not found"));	
+//	}
+//	public Patients findChildWithname(String name) {
+//		return childRepo.findChildByname(name).orElseThrow(()->new ChildNotFoundException("The child with"+name+" is not found"));
+//	}
+//	public Patients findChildByLocation(String location) {
+//		return childRepo.findChildLocation(location).orElseThrow(()->new ChildNotFoundException("The child with"+location+" is not found"));
+//	}
+//	public Patients findChildWithIdandName(String id,String name) {
+//		return childRepo.findChildByIdAndName(id, name).orElseThrow(()->new ChildNotFoundException("The child with"+id+" and "+name+" is not found"));
+//	}
+//	public Patients findChildWithIdNameAndLocation(String name,Long id ,String loc) {
+//		return childRepo.findChildByIdAndNameAndLocation(id,name, loc).orElseThrow(()->new ChildNotFoundException("The child with"+id+", "+name+" and "+loc+" is not found"));
+//	}
 	public Patients UpdateChild(Patients child) {
 		return childRepo.save(child);
 	}

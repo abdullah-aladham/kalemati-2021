@@ -19,8 +19,8 @@ public class Requests {//admin(cru_isdeleted) customer(c_isdeleted)
 	protected Date request_date;
 	@Column(nullable=false)
 	protected String requestCode;
-	@Column(nullable=false)
-	protected School customer;
+//	@Column(nullable=false)
+//	protected School customer;
 //	@Column(nullable=false)
 //	protected Teacher teacher;
 	
@@ -31,7 +31,9 @@ public class Requests {//admin(cru_isdeleted) customer(c_isdeleted)
 		this.name = name;
 		this.request_date = request_date;
 		this.requestCode = requestCode;
-		this.customer=customer;
+//		this.customer=customer;
+	}
+	public Requests() {
 	}
 	public String getRequestCode() {
 		return requestCode;
@@ -57,13 +59,13 @@ public class Requests {//admin(cru_isdeleted) customer(c_isdeleted)
 	public void setRequest_date(Date request_date) {
 		this.request_date = request_date;
 	}
-	public School getCustomer() {
-		return customer;
-	}
-	public void setCustomer(School customer) {
-		this.customer = customer;
-	}
-	
+//	public School getCustomer() {
+//		return customer;
+//	}
+//	public void setCustomer(School customer) {
+//		this.customer = customer;
+//	}
+//	
 //	public School getCustomer() {
 //		return customer;
 //	}

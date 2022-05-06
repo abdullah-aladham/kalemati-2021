@@ -46,6 +46,9 @@ Subscriptions(Long id ,String name,Date start,Date end,String token,School uid,b
 	this.isdeleted=deleted;
 //	this.User=uid;
 }
+public Subscriptions() {
+	
+}
 public Long getid() {
 	return id;
 

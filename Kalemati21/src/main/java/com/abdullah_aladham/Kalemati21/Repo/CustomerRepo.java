@@ -14,11 +14,11 @@ import com.abdullah_aladham.Kalemati21.Model.School;
 public interface CustomerRepo extends JpaRepository<School,Long> {
 	void deleteCustomerById(Long id);
 
-	Optional<School>  findSchoolById(Long id);
-	Optional<School> findSchoolByName(String name);
-	Optional<School> findSchoolByLocation(String location);
-	Optional<School> findSchoolsByIdAndName(String name,Long id);
-	Optional<School> findSchoolsByIdNameAndLocation(String name,Long id,String location);
+//	Optional<School>  findSchoolById(Long id);
+//	Optional<School> findSchoolByName(String name);
+//	Optional<School> findSchoolByLocation(String location);
+//	Optional<School> findSchoolsByIdAndName(String name,Long id);
+//	Optional<School> findSchoolsByIdNameAndLocation(String name,Long id,String location);
 	
 
 	

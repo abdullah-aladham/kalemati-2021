@@ -1,16 +1,7 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
 import javax.persistence.*;
-//import javax.persistence.Column;
-//import javax.persistence.Entity;
-//import javax.persistence.FetchType;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-//import javax.persistence.Id;
-//import javax.persistence.JoinColumn;
-//import javax.persistence.ManyToOne;
-//import javax.persistence.OneToMany;
-//import javax.persistence.OneToOne;
+
 @Entity
 public class cards {
 	@Id
@@ -23,7 +14,7 @@ public class cards {
 	protected String imagesrc;
 	@Column(nullable=false)
 	protected  String Cardcode;
-	protected CardCategories card_category;
+//	protected CardCategories card_category;
 //	private CardCategories categories;
 	//@Column 
 	//@OneToOne
@@ -40,6 +31,9 @@ public class cards {
 	this.imagesrc2=src2;
 	this.Cardcode=CardCode;
 }*/
+	public cards() {
+		
+	}
 	public cards(Long id, String name, String imagesrc, String cardcode) {
 		this.id = id;
 		this.name = name;

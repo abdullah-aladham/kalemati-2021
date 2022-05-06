@@ -10,10 +10,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 @Entity
+@Table(name="School")
 public class School  {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -33,27 +35,30 @@ public class School  {
 //	private String Email;
 	@Column(nullable=false)
 	private String CustomerCode;
-	
-	Set<Patients> children=new HashSet();
+//	@Column
+// Patients children;
 
-	@Column
-	Set<Subscriptions> sub=new HashSet();//this is meant for not letting the school immediately access to cards and not letting them forever access
+//	@Column
+//	Set<Subscriptions> sub=new HashSet();//this is meant for not letting the school immediately access to cards and not letting them forever access
 //	@Column()
 //	Set<cards> card;//i don't know really if school should be connected to cards immediately
-	@Column(nullable=false)
-	Set<Teacher> teachers=new HashSet();
+//	@Column(nullable=false)
+//	Set<Teacher> teachers=new HashSet();
 	@Column(nullable=false)
 	boolean isblocked;//checks if schools is blocked or not
-	School(Long id,String schoolname,String lastname,String Ccode,Set<Patients> children,Set<Teacher>teachers,boolean blocked,Set<Subscriptions>subs){
+	School(Long id,String schoolname,String lastname,String Ccode,Patients children,Set<Teacher>teachers,boolean blocked,Set<Subscriptions>subs){
 		
 		this.id=id;
 		this.SchoolName=schoolname;
 
 		
 		this.CustomerCode=Ccode;
-		this.children=children;
-		this.teachers=teachers;
+//		this.children=children;
+//		this.teachers=teachers;
 		this.isblocked=blocked;
+	}
+	public School() {
+		
 	}
 public Long getId() {
 	return id;
@@ -117,12 +122,12 @@ public boolean ismatch(String pass,String cpass) {
 public String toString() {
 	return "Customer "+"id="+id+","+"SchoolName"+SchoolName+", School Code:"+CustomerCode;
 }
-public Set<Patients> getChildren() {
-	return children;
-}
-public void setChildren(Set<Patients> children) {
-	this.children = children;
-}
+//public Patients getChildren() {
+//	return children;
+//}
+//public void setChildren(Patients children) {
+//	this.children = children;
+//}
 //public Subscriptions getSub() {
 //	return sub;
 //}
@@ -130,18 +135,18 @@ public void setChildren(Set<Patients> children) {
 //	this.sub = sub;
 //}
 
-public Set<Teacher> getTeachers() {
-	return teachers;
-}
-public Set<Subscriptions> getSub() {
-	return sub;
-}
-public void setSub(Set<Subscriptions> sub) {
-	this.sub = sub;
-}
-public void setTeachers(Set<Teacher> teachers) {
-	this.teachers = teachers;
-}
+//public Set<Teacher> getTeachers() {
+//	return teachers;
+//}
+//public Set<Subscriptions> getSub() {
+//	return sub;
+//}
+//public void setSub(Set<Subscriptions> sub) {
+//	this.sub = sub;
+//}
+//public void setTeachers(Set<Teacher> teachers) {
+//	this.teachers = teachers;
+//}
 public boolean isIsblocked() {
 	return isblocked;
 }

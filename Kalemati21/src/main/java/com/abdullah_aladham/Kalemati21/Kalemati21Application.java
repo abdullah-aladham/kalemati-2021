@@ -2,8 +2,11 @@ package com.abdullah_aladham.Kalemati21;
 
 import java.util.Arrays;
 
+import javax.sql.DataSource;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -30,4 +33,13 @@ public class Kalemati21Application {
 		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
 		return new CorsFilter(urlBasedCorsConfigurationSource);
 	}
+	 @Bean
+	    public DataSource datasource() {
+	        return DataSourceBuilder.create()
+	                .driverClassName("com.mysql.cj.jdbc.Driver")
+	                .url("jdbc:mysql://localhost:3306/kalemati")
+	                .username("root")
+	                .password("HelloWorld-1516!")
+	                .build();
+	    }
 }

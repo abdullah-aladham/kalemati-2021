@@ -10,8 +10,8 @@ import com.abdullah_aladham.Kalemati21.Model.Requests;
 @Repository
 public interface RequestRepo extends JpaRepository<Requests,Long> {
 
-	Optional<Requests> FindReqById(Long id);
-	Optional<Requests> FindReqByName(String name);
+//	Optional<Requests> FindReqById(Long id);
+//	Optional<Requests> FindReqByName(String name);
 //	Optional<Requests> FindReqBy(Long id);
 
 }

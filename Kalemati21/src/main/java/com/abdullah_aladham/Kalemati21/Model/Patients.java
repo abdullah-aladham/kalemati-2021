@@ -31,13 +31,13 @@ private String ChildCode;
 	private double exam_result;
 	@Column(nullable=false)
 	private boolean isdeleted;
-	@Column(nullable=false)
-	private School school;
-	@Column(nullable=false)
-	private Teacher teacher;
+//	@Column(nullable=false)
+//	private School school;
+//	@Column(nullable=false)
+//	private Teacher teacher;
 	
 //	private School school;
-	Set<Teacher>teachers=new HashSet();
+//	Set<Teacher>teachers=new HashSet();
 //	@ManyToMany
 //private	School school;
 //public Patients() {}
@@ -48,6 +48,9 @@ public Patients(Long id,String name,float age, GenderEnum g, String code,boolean
 	this.gender=g;
 	this.ChildCode=code;
 	this.isdeleted=deleted;
+}
+public Patients() {
+	
 }
 public Long getId() {
 	return id;

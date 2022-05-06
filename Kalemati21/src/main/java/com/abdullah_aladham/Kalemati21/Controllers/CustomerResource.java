@@ -34,11 +34,11 @@ public ResponseEntity<List<School>> getAllCustomers(){
 }
 
 
-@GetMapping("/find/{id}")
-public ResponseEntity<School> getCustomerById(@PathVariable("id")Long id){
-	School customer =customerService. findSchoolById(id);
-	return new ResponseEntity<>(customer, HttpStatus.OK);
-}
+//@GetMapping("/find/{id}")
+//public ResponseEntity<School> getCustomerById(@PathVariable("id")Long id){
+//	School customer =customerService. findSchoolById(id);
+//	return new ResponseEntity<>(customer, HttpStatus.OK);
+//}
 
 @PostMapping("/add")
 public ResponseEntity<School> addCustomer(@RequestBody School customer){

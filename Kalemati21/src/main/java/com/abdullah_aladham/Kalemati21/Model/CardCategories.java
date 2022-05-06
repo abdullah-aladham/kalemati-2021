@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 import com.abdullah_aladham.Kalemati21.Enums.CardCatEnum;
 
-@Entity
+//@Entity
 public class CardCategories{//admin(cru_isdeleted) customer&teacher(read)
 	
 	@Id
@@ -23,6 +23,9 @@ public 	CardCategories(Long Cat_id,CardCatEnum type){
 		this.Cat_id=Cat_id;
 		this.Categ_type=type;
 	}
+public CardCategories() {
+	
+}
 	
 
 //	public Long getId() {

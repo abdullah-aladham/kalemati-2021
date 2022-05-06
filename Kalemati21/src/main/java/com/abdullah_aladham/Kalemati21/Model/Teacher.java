@@ -26,20 +26,22 @@ public class Teacher {/*teacher has 1school(custmer)m-1, teacher has many childr
 	private String email;//teacher email
 	@Column(nullable=false)
 	private String major;//teacher major
-	@Column(nullable=false)
-    private Set<School>school=new HashSet();
+//	@Column(nullable=false)
+//    private School school;
 	
 	
 	
-	
-	public Teacher(Long id, String name, String phoneNo, String desciption, String email, String major,Set<School>schools) {
+	public Teacher() {
+		
+	}
+	public Teacher(Long id, String name, String phoneNo, String desciption, String email, String major) {
 		this.id = id;
 		this.name = name;
 		this.phoneNo = phoneNo;
 		this.desciption = desciption;
 		this.email = email;
 		this.major = major;
-		this.school=schools;
+//		this.school=schools;
 	}
 
 
@@ -117,15 +119,15 @@ public class Teacher {/*teacher has 1school(custmer)m-1, teacher has many childr
 
 
 
-	public Set<School> getSchool() {
-		return school;
-	}
-
-
-
-	public void setSchool(Set<School> school) {
-		this.school = school;
-	}
+//	public Set<School> getSchool() {
+//		return school;
+//	}
+//
+//
+//
+//	public void setSchool(Set<School> school) {
+//		this.school = school;
+//	}
 
 
 
