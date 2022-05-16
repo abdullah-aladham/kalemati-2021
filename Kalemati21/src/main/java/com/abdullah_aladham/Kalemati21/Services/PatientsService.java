@@ -15,7 +15,9 @@ import com.abdullah_aladham.Kalemati21.Repo.PatientsRepo;
 public class PatientsService {
 	private final PatientsRepo childRepo;
 
-	@Autowired
+	public PatientsService() {
+		this.childRepo=null;
+	}
 	public PatientsService(PatientsRepo customerRepo) {
 		this.childRepo=customerRepo;
 	}

@@ -15,7 +15,10 @@ import com.abdullah_aladham.Kalemati21.Repo.RequestRepo;
 public class RequestService {
 
 	private final RequestRepo reqRepo;
-@Autowired
+	public RequestService() {
+		this.reqRepo = null;
+	
+	}
 	public RequestService(RequestRepo reqRepo) {
 		this.reqRepo = reqRepo;
 	}

@@ -9,8 +9,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 import com.abdullah_aladham.Kalemati21.Enums.GenderEnum;
+@Table(name="patients")
 @Entity
 public class Patients {
 	@Id

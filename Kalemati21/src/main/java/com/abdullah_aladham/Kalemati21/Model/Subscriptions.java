@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+@Table(name="subs")
 
 @Entity
 public class Subscriptions {//must be connected with admin customer and teacher(read their subscription only)

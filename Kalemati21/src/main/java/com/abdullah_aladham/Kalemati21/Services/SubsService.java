@@ -15,7 +15,10 @@ import com.abdullah_aladham.Kalemati21.Repo.SubscriptionRepo;
 public class SubsService {
 	private final SubscriptionRepo subRepo;
 	 
-	@Autowired
+	 public SubsService() {
+		 this.subRepo=null;
+	 }
+	
 	public SubsService(SubscriptionRepo subRepo) {
 		this.subRepo=subRepo;
 	}

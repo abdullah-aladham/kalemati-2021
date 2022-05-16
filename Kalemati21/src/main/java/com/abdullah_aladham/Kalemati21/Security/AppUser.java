@@ -37,7 +37,9 @@ public class AppUser implements UserDetails {
 	private Boolean Locked;//to check if the account is locked
 	private Boolean enabled;//to check if the account is enabled
 	
-	
+	public AppUser() {
+		
+	}
 	public AppUser(String name, String username, String email, String password, ApplicationUserRole appUserRole,
 			Boolean locked, Boolean enabled) {
 	

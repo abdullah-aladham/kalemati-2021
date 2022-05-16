@@ -1,19 +1,21 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
 import javax.persistence.*;
-
+@Table(name="cards")
 @Entity
 public class cards {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
-	protected Long id ;
+	protected Long id;
 	@Column(nullable=false)
 	protected String name;
 	@Column(nullable=false)
 	protected String imagesrc;
 	@Column(nullable=false)
 	protected  String Cardcode;
+	@Column
+	protected String name1;
 //	protected CardCategories card_category;
 //	private CardCategories categories;
 	//@Column 

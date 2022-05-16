@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+@Table(name="teacher")
 
 @Entity
 public class Teacher {/*teacher has 1school(custmer)m-1, teacher has many children  */

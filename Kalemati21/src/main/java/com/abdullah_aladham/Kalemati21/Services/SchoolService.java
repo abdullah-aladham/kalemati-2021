@@ -14,7 +14,9 @@ import com.abdullah_aladham.Kalemati21.Exceptions.UserNotFoundException;
 public class SchoolService {
 	private final CustomerRepo customerRepo;
 
-	@Autowired
+	public SchoolService() {
+		this.customerRepo=null;
+	}
 	public SchoolService(CustomerRepo customerRepo) {
 		this.customerRepo=customerRepo;
 	}

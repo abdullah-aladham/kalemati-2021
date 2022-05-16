@@ -1,5 +1,7 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
+import javax.persistence.Entity;
+
 import com.abdullah_aladham.Kalemati21.Security.ApplicationUserRole;
 
 public class Admin {

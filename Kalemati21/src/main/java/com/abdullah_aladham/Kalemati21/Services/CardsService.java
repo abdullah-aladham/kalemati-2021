@@ -13,18 +13,19 @@ import com.abdullah_aladham.Kalemati21.Repo.CardRepo;
 import com.abdullah_aladham.Kalemati21.Exceptions.*;
 
 
-@Service
+//@Service
 public class CardsService {
 	
+
 	private final CardRepo cardRepo;
 	
 	
-	@Autowired
+	public CardsService() {
+		this.cardRepo = null;}
 	public CardsService(CardRepo cardRepo) {
 		this.cardRepo=cardRepo;
 	}
-	public CardsService() {
-		this.cardRepo = null;}
+	
 public cards addCard(cards card) {
 	card.SetCode(UUID.randomUUID().toString());
 	return cardRepo.save(card);
