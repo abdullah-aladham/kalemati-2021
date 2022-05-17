@@ -19,9 +19,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class School  {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(nullable=false ,updatable=false)
+	@Column(nullable=false ,updatable=false,name="school_id")
 	private Long id;
-	@Column(nullable=false)
+	@Column(nullable=false,name="school_name")
 	private String SchoolName;
 //	@Column(nullable=false)
 //	private String Phonenumber;
@@ -44,7 +44,7 @@ public class School  {
 //	Set<cards> card;//i don't know really if school should be connected to cards immediately
 //	@Column(nullable=false)
 //	Set<Teacher> teachers=new HashSet();
-	@Column(nullable=false)
+	@Column(nullable=false,name="is_blocked")
 	boolean isblocked;//checks if schools is blocked or not
 	School(Long id,String schoolname,String lastname,String Ccode,Patients children,Set<Teacher>teachers,boolean blocked,Set<Subscriptions>subs){
 		

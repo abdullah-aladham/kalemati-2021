@@ -1,9 +1,11 @@
 package com.abdullah_aladham.Kalemati21.Model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
-@Table(name="cards")
 @Entity
-public class cards {
+@Table(name="cards")
+public class cards  {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false ,updatable=false)
